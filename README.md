@@ -23,3 +23,4 @@ As a student myself I decided to build something that will make my life easier.
 Download the project files and open `index.html` in a web browser.
 
 > Assignments are saved in the browser on the device where they were added.
+BY: SOTONYE MAJOR-JACK
