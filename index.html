@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang= 'en'><!-- Adding the lang attribute here -->
+    <head>
+     <!-- Declaring the character encoding -->   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" href="style.css">
+    </head>
+    <body>
+      <header>
+        <a class="brand" href="#">
+            <span class="brand-mark" aria-hidden="true">s.</span>
+            <span>StudySpace</span>
+        </a>
+
+        <p id="current-date"></p>
+
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-copy">
+            <p class="hero-eyebrow">A LITTLE MORE ROOM TO THINK</p>
+             <h1>Make room for<br>the work that matters.</h1>
+             <p class="hero-intro">
+                Keep your deadlines in view, find your next priority<br>and take it
+                one assignment at a time.</p>
+                <a class="hero-link" href="#assignments">
+                    See your assignments<span aria-hidden="true">↓</span>
+                </a>
+        </div>
+
+        <aside class="hero-note">
+            <span aria-hidden="true">✳</span>
+            <p>Small steps<br> still move you<br>forward.</p>
+            <small>Your reminder for today</small>
+        </aside>
+    </section>
+     
+   <section class="overview">
+    <div class="overview-heading">
+        <div>
+            <p>THE WEEK AHEAD</p>
+            <h2>Your workload, at a glance</h2>
+        </div>
+        <p>Week of 27 October</p>
+    </div>
+
+    <div class="stats-grid">
+        <article class="stat-card due-card">
+            <p>Due in 7 days <span aria-hidden="true">↗</span></p>
+            <strong id="due-count">2</strong>
+            <p>Keep a little space for these.</p>
+        </article>
+
+        <article class="stat-card overdue-card">
+            <p>Overdue <span aria-hidden="true">!</span></p>
+            <strong id="overdue-count">0</strong>
+            <p>Start with one small next step.</p>
+        </article>
+
+        <article class="stat-card completed-card">
+            <p>Completed <span aria-hidden="true">✓</span></p>
+            <strong id="completed-count">1</strong>
+            <p>Look at what you’ve already done.</p>
+        </article>
+    </div>
+</section>
+
+<section class="workspace">
+    <section class="form-card">
+        <div class="form-heading">
+            <span class="form-icon" aria-hidden="true">+</span>
+            <div>
+                <p class="form-label">ADD TO YOUR PLAN</p>
+                <h2>New assignment</h2>
+            </div>
+        </div>
+
+        <p class="form-intro">Get it out of your head and onto the page.</p>
+
+        <form id="assignment-form">
+            <label for="assignment-title">Assignment title</label>
+            <input
+                type="text"
+                id="assignment-title"
+                name="title"
+                placeholder="e.g. Research essay"
+                required
+                >
+
+            <label for="module">Module or subject</label>
+            <input
+                type="text"
+                id="module"
+                name="module"
+                placeholder="e.g. Visual Communication"
+                required
+            >
+
+            <div class="form-row">
+                <div>
+                    <label for="due-date">Due date</label>
+                    <input type="date" id="due-date" name="due-date" required>
+                </div>
+
+                <div>
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority">
+                        <option>High</option>
+                        <option selected>Medium</option>
+                        <option>Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="status">Status</label>
+            <select id="status" name="status">
+                <option>Not started</option>
+                <option>In progress</option>
+                <option>Completed</option>
+            </select>
+
+            <button type="submit">Save assignment</button>
+        </form>
+    </section>
+
+    <section id="assignments">
+        <div class="assignment-section-heading">
+            <div>
+                <p class="section-eyebrow">YOUR STUDY PLAN</p>
+                <h2>Assignments <span class="assignment-count">1</span>
+                </h2>
+            </div>
+            <p class="assignment-tip">The next deadline is always a good place to begin.</p>
+        </div>
+
+        <div class="up-next">
+    <span class="up-next-number" aria-hidden="true">1</span>
+    <div>
+        <strong>Up next · Research Essay</strong>
+        <p> Design Studies · Due in 3 days · Friday 30 October</p>
+    </div>
+</div>
+
+<div class="assignment-toolbar">
+    <label class="assignment-search">
+        <span aria-hidden="true">⌕</span>
+        <input
+            id="assignment-search"
+            type="search"
+            placeholder="Search assignments..."
+            aria-label="Search assignments"
+        >
+    </label>
+
+    <select id="status-filter" aria-label="Filter by status">
+        <option value="all">All statuses</option>
+        <option value="Not started">Not started</option>
+        <option value="In progress">In progress</option>
+        <option value="Completed">Completed</option>
+    </select>
+
+    <select id="subject-filter" aria-label="Filter by subject">
+        <option value="all">All subjects</option>
+    </select>
+</div>
+
+        <article class="assignment-card" data-due-date="2026-10-30">
+            <div>
+                <p class="assignment-module">Design Studies</p>
+                <h3>Research Essay</h3>
+                <p class="assignment-due">Due: 30 October</p>
+            </div>
+
+            <div class="assignment-card-side">
+    <span class="assignment-status">Not started</span>
+    <span class="assignment-priority">Medium priority</span>
+    </div>
+
+        </article>
+
+        <article class="assignment-card" data-due-date="2026-11-19">
+            <div>
+                <p class="assignment-module">Mobile Web Application Development</p>
+                <h3>Programming for React</h3>
+                <p class="assignment-due">Due: 19 November</p>
+            </div>
+
+            <div class="assignment-card-side">
+                <span class="assignment-status">Not started</span>
+                <span class="assignment-priority">Medium priority</span>
+            </div>
+        </article>
+
+        <article class="assignment-card" data-due-date="2026-11-05">
+            <div>
+                <p class="assignment-module">Networks and Security</p>
+                <h3>In Class Test 1</h3>
+                <p class="assignment-due">Due: 5 November</p>
+            </div>
+
+            <div class="assignment-card-side">
+                <span class="assignment-status">Not started</span>
+                <span class="assignment-priority">Low priority</span>
+            </div>
+        </article>
+
+        <article class="assignment-card" data-due-date="2026-11-25">
+            <div>
+                <p class="assignment-module">Developing a Digital Identity</p>
+                <h3>Website Portfolio</h3>
+                <p class="assignment-due">Due: 25 November</p>
+            </div>
+
+            <div class="assignment-card-side">
+                <span class="assignment-status">Not started</span>
+                <span class="assignment-priority">High priority</span>
+            </div>
+        </article>
+
+        <article class="assignment-card" data-due-date="2027-01-05">
+            <div>
+                <p class="assignment-module">Introduction to Software Development</p>
+                <h3>Logbook</h3>
+                <p class="assignment-due">Due: 5 January</p>
+            </div>
+
+            <div class="assignment-card-side">
+                <span class="assignment-status">In progress</span>
+                <span class="assignment-priority">High priority</span>
+            </div>
+        </article>
+
+        <p class="storage-note">
+    <span aria-hidden="true">✳</span>
+    Your assignments are saved on this device.
+</p>
+
+    </section>
+</section>
+
+</main>
+<div class="footer-shell">
+      <footer class="site-footer">
+    <span>studyspace</span>
+    <p>Make a plan. Leave room to breathe.</p>
+</footer>
+</div>
+
+<script src="script.js"></script>
+
+    </body>
+</html>
